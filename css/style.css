@@ -7,9 +7,9 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --background-color: #FFFFFF;
-    --section-color:  rgba(216, 182, 250, 0.1);
+    --section-color: rgba(216, 182, 250, 0.1);
     --card-background-color: rgba(255, 255, 255, 0.5);
     --card-linear-gradient: linear-gradient(180deg, #D9D9D9 0%, #FFA9DC 0.01%, #FAF3B6 50.83%, #B46EFB 95.62%);
     --text-color: #000;
@@ -27,11 +27,12 @@
     --hover-floating: #F925A2;
     --footer-background: rgba(255, 253, 243, 0.3);
     --text-footer: #FFC700;
+    --line-color: #FFA9DC;
 }
 
-.lightTheme{
+.lightTheme {
     --background-color: #FFFFFF;
-    --section-color:  rgba(216, 182, 250, 0.1);
+    --section-color: rgba(216, 182, 250, 0.1);
     --card-background-color: rgba(255, 255, 255, 0.5);
     --card-linear-gradient: linear-gradient(180deg, #D9D9D9 0%, #FFA9DC 0.01%, #FAF3B6 50.83%, #B46EFB 95.62%);
     --text-color: #000;
@@ -49,11 +50,12 @@
     --hover-floating: #F925A2;
     --footer-background: rgba(255, 253, 243, 0.3);
     --text-footer: #FFC700;
+    --line-color: #FFA9DC;
 }
 
 /* ========== DARK MODE ========== */
 
-#dark_mode{
+#dark_mode {
     --background-color: #07091B;
     --card-background-color: rgba(25, 19, 43, 0.7);
     --card-linear-gradient: linear-gradient(135.93deg, rgba(255, 48, 128, 0.5) 5.92%, rgba(65, 72, 251, 0.5) 90.08%);
@@ -79,9 +81,11 @@
 body * {
     font-family: 'montserrat', 'poppins';
 }
-body{
+
+body {
     background-color: var(--background-color);
 }
+
 /* ========== HEADER ========== */
 
 header {
@@ -125,7 +129,7 @@ header {
     gap: 80px;
 }
 
-#dark_mode_img{
+#dark_mode_img {
     display: none;
 }
 
@@ -150,6 +154,7 @@ header {
     line-height: 38px;
     color: var(--text-color);
 }
+
 /* ========== input ========== */
 input[type="checkbox"] {
     appearance: none;
@@ -158,7 +163,7 @@ input[type="checkbox"] {
     background-color: var(--button-color);
 }
 
-.label{
+.label {
     background-color: var(--button-color);
     border-radius: 50px;
     cursor: pointer;
@@ -172,7 +177,7 @@ input[type="checkbox"] {
     transform: scale(.9);
 }
 
-.label .ball{
+.label .ball {
     background-color: var(--background-color);
     border-radius: 50%;
     position: absolute;
@@ -184,7 +189,7 @@ input[type="checkbox"] {
     transition: transform 0.2s linear;
 }
 
-#switch:checked + .label .ball{
+#switch:checked+.label .ball {
     transform: translateX(35px);
 }
 
@@ -210,6 +215,7 @@ input[type="checkbox"] {
     box-sizing: border-box;
     border: var(--border-floating);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.18);
+    margin-bottom: -46px;
 }
 
 .floating_items {
@@ -242,6 +248,7 @@ input[type="checkbox"] {
 .container_purple {
     background: var(--section-color);
     width: 100%;
+    padding: 50px;
 }
 
 .container_about {
@@ -253,7 +260,6 @@ input[type="checkbox"] {
 }
 
 .title {
-    width: 941px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -265,11 +271,11 @@ input[type="checkbox"] {
     font-family: 'Montserrat';
     font-weight: 600;
     padding-top: 50px;
-    padding-bottom: 8px;
+    padding-bottom: 12px;
     font-size: 40px;
     line-height: 49px;
     text-align: right;
-    color:var(--title-color);
+    color: var(--title-color);
 }
 
 .content {
@@ -292,33 +298,39 @@ input[type="checkbox"] {
 
 .about_text {
     font-family: 'Poppins';
-    font-size: 15px;
-    line-height: 22px;
-    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
     color: var(--text-color);
-    width: 90%;
+    width: 100%;
 }
 
 /* ========== SKILLS ========== */
 
 .skills {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 50px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+
 }
+
+.itens_skills {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
 
 .skills_text {
     display: flex;
     flex-direction: column;
-    gap: 18px;
 }
 
 .skills_text h4 {
     font-family: 'Montserrat';
-    font-weight: 600;
+    padding-bottom: 16px;
     font-size: 40px;
     color: var(--subtitle-color);
 }
@@ -327,14 +339,18 @@ input[type="checkbox"] {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 25px;
-    line-height: 38px;
     color: var(--text-color);
 }
 
 .icons {
-    padding: 20px;
+    padding-top: 20px;
     display: flex;
-    gap: 18px;
+    margin: 0;
+    gap: 17px;
+}
+
+.bubble {
+    padding-top: 25px;
 }
 
 .bubble img {
@@ -345,9 +361,8 @@ input[type="checkbox"] {
 /* ========== CARDS ========== */
 
 .container_cards {
-    width: 610px;
-    height: 515px;
-    margin-left: 110px;
+    width: 603px;
+    height: 510px;
     background-image: var(--bubbles-background);
     background-repeat: no-repeat;
     background-size: cover;
@@ -355,6 +370,9 @@ input[type="checkbox"] {
 
 .cards {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .item_cards {
@@ -397,7 +415,6 @@ input[type="checkbox"] {
 .projects {
     max-width: 1200px;
     width: 100%;
-    height: 625px;
     margin: 0 auto;
     padding: 50px 0;
 }
@@ -427,29 +444,44 @@ input[type="checkbox"] {
     color: var(--text-color);
 }
 
-.wrapper_projects {
+.projects {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top: 24px;
     gap: 42px;
 }
 
-.wrapper_projects p {
+.projects p {
     text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
     padding-top: 20px;
-    line-height: 30px;
     text-align: center;
     color: var(--text-color);
+}
+
+.project_item p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.banners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
 }
 
 .image {
     width: 300px;
     height: 300px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image img {
+    border-radius: 8px;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ========== projetos ========== */
@@ -473,16 +505,28 @@ input[type="checkbox"] {
 .legend {
     display: flex;
     flex-direction: column;
+    padding: 10px 0;
+    gap: 5px;
 }
 
 .legend h5 {
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 15px;
-    line-height: 17px;
+    font-size: 16px;
     text-align: center;
-    color: var(--subtitle-color);
-    padding-top: 7px;
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    height: 380px;
+    padding: 10px 5px;
+    background: var(--card-linear-gradient);
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
 }
 
 .legend p {
@@ -491,8 +535,7 @@ input[type="checkbox"] {
     font-size: 15px;
     line-height: 20px;
     text-align: center;
-    padding-top: 5px;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .legend a {
@@ -501,12 +544,11 @@ input[type="checkbox"] {
     font-weight: 400;
     font-size: 12px;
     text-align: center;
-    color: var(--text-color);
+    color: #fff;
     text-decoration: none;
 }
 
 .legend a:hover {
-    color: var(--subtitle-color);
     transition: .4s;
 }
 
@@ -514,7 +556,7 @@ input[type="checkbox"] {
 
 footer {
     width: 100%;
-    background: var(--footer-background );
+    background: var(--footer-background);
 }
 
 .container_yellow {
@@ -592,13 +634,277 @@ footer {
     font-size: 40px;
     line-height: 49px;
     text-align: center;
-    color: var(--footer-text-color);
+    color: var(--text-color);
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVIDADE ========== */
 
-@media screen {
-    .container{
-        
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0;
+        height: auto;
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    .items_header h4 {
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .wrapper {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+        margin: 0 auto;
+    }
+
+    .wrapper h3 {
+        line-height: 30px;
+        font-size: 18px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .wrapper p {
+        font-size: 16px;
+        padding-top: 10px;
+        line-height: 30px;
+        text-align: justify;
+        color: var(--text-color);
+    }
+
+    .container_floating {
+        width: 100%;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    .floating_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        height: 270px;
+    }
+
+    .floating_items {
+        border-right: none;
+        width: 100%;
+        border-bottom: var(--border-floating);
+        padding: 0;
+    }
+
+    .floating_items a {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .container_purple {
+        max-width: 600px;
+        width: 100%;
+        height: 100%;
+        padding: 45px;
+        padding: 0;
+    }
+
+    .container_about {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .content {
+        padding: 16px 0;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .title h4 {
+        font-size: 24px;
+        line-height: 18px;
+        padding: 16px 0;
+    }
+
+    .about_text p {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .skills {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 26px;
+    }
+
+    .itens_skills {
+        width: 100%;
+    }
+
+    .skills_text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .skills_text h4 {
+        text-align: center;
+        font-size: 26px;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #B46EFB;
+    }
+
+    .skills_text p {
+        padding-top: 16px;
+        text-align: justify;
+        font-size: 19px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bubble {
+        display: none;
+    }
+
+    .container_cards {
+        background-image: none;
+    }
+
+    .cards {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_cards,
+    #item,
+    #item3 {
+        width: 315px;
+        height: 130px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #item2{
+        margin: 0 10px;
+    }
+
+    .item_cards img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .item_cards h5 {
+        padding-top: 10px;
+        font-size: 18px;
+    }
+
+    .item_cards p {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    .projects {
+        padding: 26px;
+    }
+
+    .projects p{
+        padding-top: 10px;
+    }
+
+    .text {
+        padding: 0;
+        margin: 0;
+        gap: 0;
+    }
+
+    .text h4{
+        font-size: 26px;
+        padding: 0;
+    }
+
+    .text p{
+        font-size: 19px;
+        text-align: left;
+        line-height: normal;
+    }
+
+    .banners{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .itens{
+        padding: 16px;
+    }
+
+    .wrapper_card{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_text h4{
+        font-size: 26px;
+    }
+
+    .footer_text span{
+        font-size: 26px;
+    }
+
+    .footer_icons{
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 30px;
+    }
+
+    .icon{
+        margin: 0;
+    }
+
+    .memoji{
+        display: none;
+    }
+
+    .container_yellow{
+        max-width: 600px;
+        width: 100%;
+        padding: 16px;
+    }
+
+    .footer_bar{
+        margin: 0;
+        height: 64px;
+        padding: 10px;
+    }
+
+    .footer_bar p{
+        font-size: 26px;
     }
 }

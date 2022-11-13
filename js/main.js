@@ -5,7 +5,7 @@ const lightTheme = {
     '--background-color': '#FFFFFF',
     '--section-color':  'rgba(216, 182, 250, 0.1)',
     '--card-background-color': 'rgba(255, 255, 255, 0.5)',
-    '--card-linear-gradient': 'linear-gradient(180deg, #D9D9D9 0%, #FFA9DC 0.01%, #FAF3B6 50.83%, #B46EFB 95.62%)',
+    '--card-linear-gradient': 'linear-gradient(180deg, rgba(217, 217, 217, 0.7) 0%, rgba(255, 169, 220, 0.7) 0.01%, rgba(250, 243, 182, 0.7) 50.83%, rgba(180, 110, 251, 0.7) 95.62%)',
     '--text-color': '#000',
     '--title-color-second': '#fff',
     '--title-color': '#F925A2',
@@ -19,7 +19,8 @@ const lightTheme = {
     '--border-floating': '1px solid #FFA9DC',
     '--bg-avatar': 'url("../assets/border.svg")',
     '--footer-background': 'rgba(255, 253, 243, 0.3)',
-    '--text-footer': '#FFC700'
+    '--text-footer': '#FFC700',
+    '--line-color': '#FFA9DC'
 }
 
 const darkTheme = {
@@ -56,7 +57,6 @@ function changeTheme(theme) {
    for (let prop in theme) {
     changeProperty(prop, theme[prop])
    }
-   console.log(theme)
 }
 
 function changeProperty(property, value) {
