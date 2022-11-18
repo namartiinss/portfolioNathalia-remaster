@@ -5,7 +5,7 @@ const lightTheme = {
     '--background-color': '#FFFFFF',
     '--section-color':  'rgba(216, 182, 250, 0.1)',
     '--card-background-color': 'rgba(255, 255, 255, 0.5)',
-    '--card-linear-gradient': 'linear-gradient(180deg, rgba(217, 217, 217, 0.7) 0%, rgba(255, 169, 220, 0.7) 0.01%, rgba(250, 243, 182, 0.7) 50.83%, rgba(180, 110, 251, 0.7) 95.62%)',
+    '--card-linear-gradient': 'linear-gradient(180deg, rgba(217, 217, 217, 0.6) 0%, rgba(255, 169, 220, 0.6) 0.01%, rgba(250, 243, 182, 0.6) 50.83%, rgba(180, 110, 251, 0.6) 95.62%)',
     '--text-color': '#000',
     '--title-color-second': '#fff',
     '--title-color': '#F925A2',
@@ -20,7 +20,8 @@ const lightTheme = {
     '--bg-avatar': 'url("../assets/border.svg")',
     '--footer-background': 'rgba(255, 253, 243, 0.3)',
     '--text-footer': '#FFC700',
-    '--line-color': '#FFA9DC'
+    '--line-color': '#FFA9DC',
+    '--ball-img': 'url("../assets/light.svg")'
 }
 
 const darkTheme = {
@@ -41,7 +42,8 @@ const darkTheme = {
         '--border-floating': '1px solid #7E24AB',
         '--bg-avatar': 'url("../assets/borderDark.svg")',
         '--footer-background': 'rgba(75, 0, 150, 0.1)',
-        '--text-footer': '#fff'
+        '--text-footer': '#fff',
+        '--ball-img':' url("../assets/dark.svg")'
 }
 
 inputContainer.addEventListener('change', function() {
